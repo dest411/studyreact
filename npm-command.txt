@@ -1,0 +1,32 @@
+npm init
+    # Створює файл package.json (налаштування про проєкт)
+
+npm install / npm i
+    # Встановлює всі залежності з package.json
+
+npm install PACKAGE
+    # Встановлює вказаний пакет як залежність (запишеться в dependencies)
+
+npm install PACKAGE@1.0.0
+    # Встановлює конкретну версію пакета (наприклад, версію 1.0.0)
+
+npm install PACKAGE@1.0.0 PACKAGE_2
+    # Встановлює одразу кілька пакетів (один з конкретною версією)
+
+npm run SCRIPT / npm start
+    # Запускає скрипт з package.json (start — скорочення для npm run start)
+
+npm uninstall / npm un
+    # Видаляє всі залежності (або конкретний пакет, якщо вказати)
+
+npm install -g
+    # Встановлення глобально (наприклад, інструментів CLI) → потім можна викликати через npx
+
+npm install PACKAGE -D
+    # Встановлює як dev-залежність (тільки для розробки)
+
+npm install PACKAGE --save-dev 
+    # Те саме, що і -D (альтернативна форма)
+
+npm install PACKAGE -E
+    #Встановлює точну версію без ^ або ~ (без автоматичних оновлень)
