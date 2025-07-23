@@ -11,7 +11,7 @@ root.render(
      
     <App/>
     <div className='hello' >
-      sdfsd
+      
     </div>
   </React.StrictMode>
 );
