@@ -1,24 +1,35 @@
-import React from "react";
+import React from 'react';
 import './main.css'
 
 
 const USERS = [
-    { name: 'Alex' },
-    { name: 'John' },
-    { name: 'Bob' },
-
+    { name: 'Alex', surname: 'test', age: 20, passportId: 123 },
+    { name: 'Alex', surname: 'test2', age: 20, passportId: 66 },
+    { name: 'John', surname: 'test3', age: 56, passportId: 123 },
+    { name: 'Bob', surname: 'test4', age: 10, passportId: 50 },
 ];
 
 const App = () => {
   
+    const data = [];
+    USERS.forEach((user) => {
+        const key = generateKey(user);
+
+        data.push(
+            <div key={key} >
+                <p>{user.name}</p>
+            </div>
+        );
+    } )
 
     return (
         <div>
-            {USERS.map((user) => (
-                <p key={user.name} > {user.name} </p>
-            ))}
+           {data}
         </div>
     )
 };
+function generateKey(user) {
+    return `${user.name}_${user.surname}_${user.age}_${user.passportId}`;
+}
 
 export default App;
