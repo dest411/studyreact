@@ -10,9 +10,9 @@ root.render(
     
      
     <App/>
-    <div className='hello' >
+    {/* <div className='hello' >
       
-    </div>
+    </div> */}
   </React.StrictMode>
 );
  

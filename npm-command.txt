@@ -30,3 +30,13 @@ npm install PACKAGE --save-dev
 
 npm install PACKAGE -E
     #Встановлює точну версію без ^ або ~ (без автоматичних оновлень)
+
+// import / export
+
+// export const TEST = ....L
+// export { TEST1, testFunction }
+// > import { TEST } from './...';
+
+
+// export default TEST;
+// > import SFSDGSDGS from './....';
