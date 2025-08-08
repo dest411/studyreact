@@ -73,7 +73,7 @@ const MOVIES = [
         name: 'Про мужика с медведем',
         description: 'Медведь читает газету',
         author: { name: 'John' },
-        img: 'https://www.film.ru/sites/default/files/images/crobn_013h_g_spa-ar_70x100_002_nuevo.jpg' 
+        img: 'https://festagent.com/system/tilda/tild6137-6632-4661-a361-613336646361__e4fac156b38cab487ec4.jpg'
     },
     {
         id: 3,

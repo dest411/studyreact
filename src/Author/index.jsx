@@ -1,8 +1,10 @@
 import React from 'react';
+import './index.css';
+
 const Author = (props) => {
     return (
         <div>
-            <p>Автор {props.name} </p>
+            <p className='name' >Автор {props.name} </p>
         </div>
     );
 };

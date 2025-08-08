@@ -1,8 +1,10 @@
 import React from 'react';
 import Author from '../Author';
+import './index.css';
+
 const Poster = (props) => {
     return (
-        <div>
+        <div className='poster' >
             <img src={props.img} alt={props.name} />
             <h2>{props.name}</h2>
 
