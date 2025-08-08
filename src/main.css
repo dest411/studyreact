@@ -1,22 +1,24 @@
-/* .hello{
-    background-color: rgb(161, 115, 115);
- }
-
- .good {
-    background-color: green;
- }
- .bad{
-    background-color: red;
- }
- .test1{
-    display: flex;
-    flex-direction: column;
-    color: blue;
-    text-align: center;
- }
- .test2{
-    display: flex;
-    flex-direction: column;
-    color:red;
-    text-align: center;
- } */
+*{
+   padding: 0;
+   margin: 0;
+}
+.test{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding:50px;
+   background-color: rgb(224, 224, 219);
+}
+.btn{
+   width: 100px;
+   height: 30px;
+   background-color: rgb(158, 200, 193);
+   border: none;
+   border-radius: 5px;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+.btn:hover{
+   transform: scale(1.1);
+}
