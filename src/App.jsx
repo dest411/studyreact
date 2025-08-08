@@ -59,6 +59,7 @@
 // export default App;
 
 import React from 'react';
+import Poster from './Poster';
 
 const MOVIES = [
     {
@@ -84,9 +85,17 @@ const MOVIES = [
 const App = () => {
     return (
         <div>
-            {MOVIES}
+            {MOVIES.map ((movie) => (
+                <Poster
+                    key={movie.id}
+                    name={movie.name}
+                    description={movie.description}
+                    author={movie.author}
+                    img={movie.img}
+                />
+            ) )}
         </div>
-    )
-}
+    );
+};
 
 export default App;
