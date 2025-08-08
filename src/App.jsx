@@ -29,7 +29,8 @@ const App = () => {
         const key = generateKey(user);
         data.push(
             <div key={key} >
-                <UserName 
+                <UserName
+                    userId = {user.id}
                     userName = {user.name}
                     userSurname = {user.surname}
                     userAge = {user.age}

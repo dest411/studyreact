@@ -7,7 +7,7 @@ const UserName = (props) => {
         props.userAge > 20 ? (
             <p className='dsfsdfs'> 
                 {props.userName}
-                <button>Змінити ім'я</button>            
+                <button  >Змінити ім'я</button>            
             </p>
         ): (
             <p className='safsd' >{props.userName} {props.userSurname}</p>
