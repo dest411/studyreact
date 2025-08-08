@@ -1,4 +1,5 @@
 import React from 'react';
+import Author from '../Author';
 const Poster = (props) => {
     return (
         <div>
@@ -7,7 +8,13 @@ const Poster = (props) => {
 
             {typeof props.description === 'string' && (
                 <h4>{props.description}</h4>
-            ) }
+            )}
+
+            {props.author ? (
+                <Author name={props.author.name} />
+            ) : null}
+
+            
         </div>
     );
 };
