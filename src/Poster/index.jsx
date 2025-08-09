@@ -3,6 +3,8 @@ import Author from '../Author';
 import './index.css';
 
 const Poster = (props) => {
+    props.logger(props.name);
+    
     return (
         <div className='poster' >
             <img src={props.img} alt={props.name} />

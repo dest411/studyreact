@@ -2,9 +2,12 @@ import React from "react";
 import './index.css';
 
 const BoxShadowWrapper = (props) => {
+    const logger = (d) => {
+        console.log('Залогировано', d);
+    }
     return (
         <div className='shadow'>
-            {props.children}
+            {React.cloneElement(props.children, { logger })}
         </div>
     );
 };
