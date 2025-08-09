@@ -60,6 +60,7 @@
 
 import React from 'react';
 import Poster from './Poster';
+import './main.css'
 
 const MOVIES = [
     {
@@ -84,7 +85,7 @@ const MOVIES = [
 
 const App = () => {
     return (
-        <div>
+        <div className='wrapper' >
             {MOVIES.map ((movie) => (
                 <Poster
                     key={movie.id}
