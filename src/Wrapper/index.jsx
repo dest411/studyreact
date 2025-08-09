@@ -5,7 +5,7 @@ const BoxShadowWrapper = (props) => {
    
     return (
         <div className='shadow'>
-            {React.cloneElement(props.children, { logger })}
+            {props.children}
         </div>
     );
 };
