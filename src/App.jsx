@@ -61,6 +61,8 @@
 import React from 'react';
 import Poster from './Poster';
 import './main.css'
+import './Wrapper/index.css';
+import BoxShadowWrapper from './Wrapper';
 
 const MOVIES = [
     {
@@ -87,14 +89,16 @@ const App = () => {
     return (
         <div className='wrapper' >
             {MOVIES.map ((movie) => (
-                <Poster
-                    key={movie.id}
-                    name={movie.name}
-                    description={movie.description}
-                    author={movie.author}
-                    img={movie.img}
-                />
-            ) )}
+                <BoxShadowWrapper key={movie.id}> 
+                    <Poster 
+                        name={movie.name}
+                        description={movie.description}
+                        author={movie.author}
+                        img={movie.img}
+                    />      
+                </BoxShadowWrapper>
+                
+            ))}
         </div>
     );
 };
