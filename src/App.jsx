@@ -15,9 +15,24 @@ const App = () => {
     //     </div>
     // );
 
+    const [name, setName] = useState('');
+    const [password, setPassword]= useState('');
+
+    const onChangeName = (event) => {
+        setName(event.target.value);
+        
+    };
+    
+    const onChangePassword = (event) => {
+        setPassword(event.target.value)
+    };
     return (
         <div>
-            
+            <input type="text" onChange={onChangeName} />
+            <input type="password" onChange={onChangePassword} />
+
+            <p>Ваше ім'я: {name} </p>
+            <p>Ваш пароль: {password} </p>
         </div>
     )
 
