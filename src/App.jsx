@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './main.css'
 
 const App = () => {
-    let isDark = false;
+
+    const [isDark, setIsDark] = useState(true);
     const onClickHandler = () => {
-        console.log(isDark);
+        setIsDark(!isDark);
+        console.log(setIsDark);
         
-        isDark = true;
     };
     return (
         <div className={isDark ? 'dark' : 'light' } >
