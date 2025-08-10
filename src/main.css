@@ -1,0 +1,13 @@
+.dark, .light{
+   width: 100%;
+   height: 100vh;
+}
+
+.dark {
+   background-color: #121212;
+   color: #ffffff;
+}
+.light {
+   background-color: hsl(0, 0%, 90%);
+   color: #000000;
+}
