@@ -15,24 +15,31 @@ const App = () => {
     //     </div>
     // );
 
-    const [name, setName] = useState('');
-    const [password, setPassword]= useState('');
+    // const [name, setName] = useState('');
+    // const [password, setPassword]= useState('');
+
+    const [data, setData] = useState({ name: '', password: '' });
 
     const onChangeName = (event) => {
-        setName(event.target.value);
-        
+        setData(prev => ({
+            ...prev, // копіюємо старі значення
+            name: event.target.value // змінюємо тільки name
+        }));
     };
-    
-    const onChangePassword = (event) => {
-        setPassword(event.target.value)
+
+  const onChangePassword = (event) => {
+        setData(prev => ({
+            ...prev, // копіюємо старі значення
+            password: event.target.value // змінюємо тільки password
+        }));
     };
     return (
         <div>
             <input type="text" onChange={onChangeName} />
             <input type="password" onChange={onChangePassword} />
 
-            <p>Ваше ім'я: {name} </p>
-            <p>Ваш пароль: {password} </p>
+            <p>Ваше ім'я: {data.name} </p>
+            <p>Ваш пароль: {data.password} </p>
         </div>
     )
 
