@@ -11,7 +11,7 @@ const App = () => {
     };
     return (
         <div className={isDark ? 'dark' : 'light' } >
-            <button onClick={onClickHandler}>Переключити тему</button>
+            <button className='btn' onClick={onClickHandler}>Переключити тему</button>
         </div>
     );
 };
