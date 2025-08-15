@@ -7,6 +7,11 @@ const Children = () =>{
         
     }, [] );
 
+    useEffect (() => {
+        return () => {
+            console.log('i am unmounting');
+        }
+    }, [] );
     
     return (
         <div>
