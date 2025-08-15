@@ -19,11 +19,10 @@ const App = () => {
     
     return (
         <div>
-            {count}
             <button onClick={countHandler} >+</button>
             <button onClick={countHandlerr} >-</button>
-            <button onClick={onClickHandler} >swithc</button>
-            {state ? <Children /> : null}
+            <button onClick={onClickHandler} >switch</button>
+            {state ? <Children count={count} /> : null}
         </div>
     )
 

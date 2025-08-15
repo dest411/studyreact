@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-const Children = () =>{
+const Children = (props) =>{
 
-    useEffect (() => {
-        console.log('i am children');
-        return () => {
-            console.log('i am unmounting');
-        }
-    }, [] );
+    const [delivery, setDelivery] = useState(false);
+
+    useEffect(() => {
+        if (props.count >= 10) {
+            setDelivery(true);
+        }else{
+            setDelivery(false);
+        }}, [props.count]);
     
     return (
         <div>
-            i am children
+            i am children {props.count}
+            {delivery ? <p>Вам доступна знижка</p> : null} 
         </div>
     )
 }
