@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Children = () =>{
+
+    useEffect (() => {
+        console.log('i am children');
+        
+    }, [] );
+
+    
     return (
         <div>
             i am children

@@ -3,9 +3,16 @@ import Children from './Children';
 import './main.css'
 
 const App = () => {
+    const [state, setState] = useState(false);
+
+    const onClickHandler = () => {
+        setState(!state);
+    }
+
     return (
         <div>
-            <Children />
+            <button onClick={onClickHandler} >swithc</button>
+            {state ? <Children /> : null}
         </div>
     )
 
