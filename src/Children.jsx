@@ -4,10 +4,6 @@ const Children = () =>{
 
     useEffect (() => {
         console.log('i am children');
-        
-    }, [] );
-
-    useEffect (() => {
         return () => {
             console.log('i am unmounting');
         }
