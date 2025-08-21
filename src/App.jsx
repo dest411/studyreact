@@ -20,17 +20,26 @@ const App = () => {
             console.log('Please enter a task');
         }
     }
+    
+    console.log(tasksList);
+    
+
+    const deleteTask = () =>{
+
+    }
 
     return (
         <div>
             <Header/>
             <input onChange={handeChange} value={task} type="text"/>
-            <button onClick={addTask}>Add</button>
+            <button onClick={addTask}>Add task</button>
             <ul>
                 {tasksList.map((task, index) => (
-                    <li key={index}>{task}</li>
+                    <li key={index}>{index} {task} <button onClick={deleteTask}>Delete task</button> </li>
+                    
                 ))}
             </ul>
+            
         </div>
     )
 
