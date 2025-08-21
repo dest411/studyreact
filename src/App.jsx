@@ -24,8 +24,9 @@ const App = () => {
     console.log(tasksList);
     
 
-    const deleteTask = () =>{
-
+    const deleteTask = (index) =>{
+        const newTaskList = (tasksList.filter((_, i) => i !== index));
+        setTasksList(newTaskList);
     }
 
     return (
@@ -35,7 +36,8 @@ const App = () => {
             <button onClick={addTask}>Add task</button>
             <ul>
                 {tasksList.map((task, index) => (
-                    <li key={index}>{index} {task} <button onClick={deleteTask}>Delete task</button> </li>
+                    <li key={index}>{index} {task}
+                    <button onClick={() => deleteTask(index) }>Delete task</button></li>
                     
                 ))}
             </ul>
