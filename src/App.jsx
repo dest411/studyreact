@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import Header from './Header';
-import './main.css'
+import Header from './component/Header';
+import TaskForm from './component/TaskForm';
+import TaskList from './component/TaskList';
+import './css/main.css';
 
 const App = () => {
     
@@ -20,27 +22,23 @@ const App = () => {
             console.log('Please enter a task');
         }
     }
-    
-    console.log(tasksList);
-    
-
     const deleteTask = (index) =>{
         const newTaskList = (tasksList.filter((_, i) => i !== index));
         setTasksList(newTaskList);
     }
 
     return (
-        <div>
+        <div className="app">
             <Header/>
-            <input onChange={handeChange} value={task} type="text"/>
-            <button onClick={addTask}>Add task</button>
-            <ul>
-                {tasksList.map((task, index) => (
-                    <li key={index}>{index} {task}
-                    <button onClick={() => deleteTask(index) }>Delete task</button></li>
-                    
-                ))}
-            </ul>
+            <TaskForm
+                handeChange={handeChange}
+                addTask={addTask}
+                task={task}
+            />
+            <TaskList
+                tasksList={tasksList}
+                deleteTask={deleteTask}
+            />
             
         </div>
     )

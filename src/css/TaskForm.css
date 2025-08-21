@@ -1,0 +1,33 @@
+.task-form{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.task-form input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #000000;
+    transition: 0.2s ease;
+}
+.task-form input:hover{
+    transform: scale(1.05);
+}
+
+.task-form button {
+    width: 100px;
+    height: 42px;
+    font-size: 20px;
+    border: 1px solid #000000;
+    text-align:center;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+.task-form button:hover{
+    transform: scale(1.05);
+    background-color: hsl(0, 0%, 91%);
+}
+.task-form button:active{
+    transform: scale(0.95);
+}
